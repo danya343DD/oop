@@ -1,0 +1,28 @@
+﻿<Window x:Class="Questionnaire.ResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Результат анкеты" Height="400" Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="CanResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="ResultTextBox" 
+                 Grid.Row="0"
+                 TextWrapping="Wrap" 
+                 IsReadOnly="True"
+                 VerticalScrollBarVisibility="Auto"
+                 FontFamily="Consolas"
+                 FontSize="14"
+                 Background="#F9F9F9"
+                 Margin="0,0,0,10"/>
+
+        <Button Grid.Row="1" Content="Закрыть" 
+                Height="30" Width="100"
+                HorizontalAlignment="Right"
+                Click="CloseButton_Click"/>
+    </Grid>
+</Window>
